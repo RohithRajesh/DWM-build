@@ -83,7 +83,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "terminator", NULL };
 static const char *config_file[]= {"code","/home/rohith/dwm-6.2/config.def.h"};
 static const char *browser[]={"chromium",NULL};
-static const char *screenshot[]={"flameshot gui",NULL};
+static const char *screenshot[]={"flameshot","gui",NULL};
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ 0,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
