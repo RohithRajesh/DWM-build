@@ -84,6 +84,8 @@ static const char *termcmd[]  = { "terminator", NULL };
 static const char *config_file[]= {"code","/home/rohith/dwm-6.2/config.def.h"};
 static const char *browser[]={"chromium",NULL};
 static const char *screenshot[]={"flameshot","gui",NULL};
+static const char *lockscreen[]={"betterlockscreen","-l",NULL};
+
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ 0,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
@@ -91,6 +93,7 @@ static Key keys[] = {
 	{ 0,                       XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
 	{ MODKEY,                       XK_c,      spawn,          {.v = config_file } },
 	{ MODKEY|ShiftMask,             XK_a,      spawn,          {.v = screenshot  } },
+	{ MODKEY|ShiftMask,             XK_o,      spawn,          {.v = lockscreen  } },
 
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
