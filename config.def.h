@@ -14,7 +14,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=12","fontawesome:size=12" };
-static const char dmenufont[]       = "monospace:size=11";
+static const char dmenufont[]       = "monospace:size=13";
 
 //Background Number
 static const char col_gray1[]       = "#222222";
@@ -87,16 +87,18 @@ static const char *screenshot[]={"flameshot","gui",NULL};
 static const char *power[]={"dpower",NULL};
 static const char *bitwarden_pass[]={"dmenu_bitwarden","-p",NULL};
 static const char *bitwarden_user[]={"dmenu_bitwarden","-u",NULL};
-
+static const char *todo[]={"todo",NULL};
+static const char *clipboard[]={"clipmenu",NULL};
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ 0,                       XF86XK_AudioLowerVolume, spawn, {.v = downvol } },
 	{ 0,                       XF86XK_AudioMute, spawn, {.v = mutevol } },
 	{ 0,                       XF86XK_AudioRaiseVolume, spawn, {.v = upvol   } },
-	{ MODKEY,                       XK_c,      spawn,          {.v = config_file } },
+	{ MODKEY,                       XK_c,      spawn,          {.v = clipboard } },
 	{ MODKEY|ShiftMask,             XK_a,      spawn,          {.v = screenshot  } },
 	{ MODKEY|ShiftMask,             XK_o,      spawn,          {.v = power } },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = bitwarden_pass}  },
+	{ MODKEY|ShiftMask,             XK_t,      spawn,          {.v = todo}  },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
